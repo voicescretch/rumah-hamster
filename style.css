@@ -1,0 +1,11 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #faf6f0;
+  color: #451a03;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(253, 186, 116, 0.25);
+}

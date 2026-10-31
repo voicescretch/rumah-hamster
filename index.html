@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Hamster - Surga Nyaman & Sehat Hamster Kesayangan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        peach: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                        },
+                        amberwarm: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        choco: {
+                            500: '#7c2d12',
+                            700: '#451a03',
+                            800: '#290e02',
+                        },
+                        cream: '#FAF6F0',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased selection:bg-peach-200 selection:text-choco-700">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 glass-card shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div
+                    class="w-12 h-12 bg-amberwarm-100 rounded-2xl flex items-center justify-center text-peach-500 shadow-inner group-hover:scale-105 transition-transform">
+                    <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tight text-choco-700 block leading-none">Rumah<span
+                            class="text-peach-400">Hamster</span></span>
+                    <span class="text-xs font-semibold text-amberwarm-600 tracking-wider">CARE & STORE</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-semibold text-choco-700/80">
+                <a href="#tentang" class="hover:text-peach-500 transition-colors">Tentang Kami</a>
+                <a href="#produk" class="hover:text-peach-500 transition-colors">Produk & Jasa</a>
+                <a href="#kalkulator" class="hover:text-peach-500 transition-colors">Kalkulator Kandang</a>
+                <a href="#edukasi" class="hover:text-peach-500 transition-colors">Tips Perawatan</a>
+                <a href="#testimoni" class="hover:text-peach-500 transition-colors">Ulasan</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+                    class="hidden sm:inline-flex items-center gap-2 bg-peach-400 hover:bg-peach-500 text-white font-bold px-5 py-2.5 rounded-full shadow-lg shadow-peach-400/30 transition-all hover:scale-105 active:scale-95">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Konsultasi WA</span>
+                </a>
+                <button id="mobileMenuBtn"
+                    class="md:hidden p-2 rounded-xl text-choco-700 hover:bg-peach-100 transition-colors"
+                    aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-peach-100 bg-white/95 px-6 py-4 space-y-3">
+            <a href="#tentang" class="block font-medium text-choco-700 hover:text-peach-500 py-1">Tentang Kami</a>
+            <a href="#produk" class="block font-medium text-choco-700 hover:text-peach-500 py-1">Produk & Jasa</a>
+            <a href="#kalkulator" class="block font-medium text-choco-700 hover:text-peach-500 py-1">Kalkulator
+                Kandang</a>
+            <a href="#edukasi" class="block font-medium text-choco-700 hover:text-peach-500 py-1">Tips Perawatan</a>
+            <a href="#testimoni" class="block font-medium text-choco-700 hover:text-peach-500 py-1">Ulasan</a>
+            <a href="https://wa.me/62895619569494" target="_blank" rel="noopener"
+                class="flex items-center justify-center gap-2 bg-peach-400 text-white font-bold py-2.5 rounded-xl mt-3">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Hubungi via WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Left Hero Text -->
+                <div class="space-y-6 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-peach-100 text-peach-500 text-sm font-bold shadow-sm">
+                        <span>#1 Pusat Perawatan Hamster Terpercaya</span>
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-choco-700 tracking-tight leading-tight">
+                        Surga Nyaman & Sehat untuk <span
+                            class="text-peach-400 underline decoration-amberwarm-200 decoration-wavy">Hamster</span>
+                        Kesayangan
+                    </h1>
+                    <p class="text-lg text-choco-700/80 max-w-xl mx-auto lg:mx-0 font-medium">
+                        Temukan koleksi kandang estetik ramah kesejahteraan hewan, racikan makanan nutrisi tinggi,
+                        mainan senyap, dan hotel penitipan hamster bintang lima.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#produk"
+                            class="inline-flex items-center justify-center gap-2 bg-peach-400 hover:bg-peach-500 text-white text-lg font-bold px-8 py-4 rounded-2xl shadow-xl shadow-peach-400/30 transition-all hover:-translate-y-0.5">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                            <span>Jelajahi Produk</span>
+                        </a>
+                        <a href="#kalkulator"
+                            class="inline-flex items-center justify-center gap-2 bg-white hover:bg-peach-50 text-choco-700 text-lg font-bold px-8 py-4 rounded-2xl shadow-md border border-peach-200 transition-all">
+                            <i data-lucide="calculator" class="w-5 h-5 text-peach-400"></i>
+                            <span>Cek Ukuran Kandang</span>
+                        </a>
+                    </div>
+                    <!-- Stats Badge -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-peach-200/60 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl font-extrabold text-choco-700">1,500+</div>
+                            <div class="text-xs text-choco-700/70 font-medium">Hamster Bahagia</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-extrabold text-choco-700">100%</div>
+                            <div class="text-xs text-choco-700/70 font-medium">Aman & Non-Toxic</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-extrabold text-choco-700">4.9★</div>
+                            <div class="text-xs text-choco-700/70 font-medium">Rating Pelanggan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Banner Graphics -->
+                <div class="relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Shapes -->
+                        <div
+                            class="absolute -top-6 -left-6 w-72 h-72 bg-peach-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-amberwarm-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"
+                            style="animation-delay: 1s;"></div>
+
+                        <div class="relative bg-white p-4 sm:p-6 rounded-3xl shadow-2xl border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=800"
+                                alt="Cute Hamster in Clean Enclosure"
+                                onerror="this.src='https://placehold.co/600x400/ffedd5/7c2d12?text=Rumah+Hamster+Hero'"
+                                class="w-full h-[340px] sm:h-[420px] object-cover rounded-2xl shadow-md">
+
+                            <!-- Floating Info Cards -->
+                            <div
+                                class="absolute -bottom-5 left-4 bg-white/95 backdrop-blur px-4 py-3 rounded-2xl shadow-lg border border-peach-100 flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-amberwarm-100 flex items-center justify-center text-amberwarm-600">
+                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-choco-700">Garansi Bebas Stress</p>
+                                    <p class="text-[11px] text-choco-700/70">Kandang Sesuai Standar Animal Welfare</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="tentang" class="py-16 bg-white border-y border-peach-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-sm font-bold text-peach-500 uppercase tracking-widest mb-2">Tentang Rumah Hamster</h2>
+                <p class="text-3xl font-extrabold text-choco-700">Komitmen Kami Terhadap Kesejahteraan Hamster</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 rounded-3xl bg-cream border border-peach-100 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-14 h-14 bg-peach-100 text-peach-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="box" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-choco-700 mb-3">Kandang Layak Huni</h3>
+                    <p class="text-choco-700/80 text-sm leading-relaxed">
+                        Kami menolak kandang jeruji mini. Seluruh enclosure dirancang luas, transparan, dan memungkinkan
+                        bedding tebal untuk kebiasaan menggali natural.
+                    </p>
+                </div>
+
+                <div
+                    class="p-8 rounded-3xl bg-cream border border-peach-100 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-14 h-14 bg-amberwarm-100 text-amberwarm-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="apple" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-choco-700 mb-3">Nutrisi Alami & Seimbang</h3>
+                    <p class="text-choco-700/80 text-sm leading-relaxed">
+                        Pakan racikan berbiji utuh tanpa pewarna buatan, dilengkapi serangga kering (protein tinggi) dan
+                        bunga-bunga herbal penyegar.
+                    </p>
+                </div>
+
+                <div
+                    class="p-8 rounded-3xl bg-cream border border-peach-100 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-14 h-14 bg-peach-100 text-peach-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="heart-pulse" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-choco-700 mb-3">Edukasi & Pendampingan</h3>
+                    <p class="text-choco-700/80 text-sm leading-relaxed">
+                        Tim kami siap membimbing pemula dari nol. Mulai dari taming (penjinakan), perawatan medis dasar,
+                        hingga konsultasi diet gratis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services & Products Section -->
+    <section id="produk" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-sm font-bold text-peach-500 uppercase tracking-widest mb-2">Katalog & Layanan</h2>
+                    <p class="text-3xl font-extrabold text-choco-700">Pilihan Terbaik untuk Hamster Anda</p>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="filterContainer">
+                    <button onclick="filterProducts('all')"
+                        class="filter-btn active px-5 py-2.5 rounded-xl font-bold text-sm bg-peach-400 text-white shadow-md transition-all">Semua</button>
+                    <button onclick="filterProducts('kandang')"
+                        class="filter-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-choco-700 hover:bg-peach-100 transition-all">Kandang</button>
+                    <button onclick="filterProducts('makanan')"
+                        class="filter-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-choco-700 hover:bg-peach-100 transition-all">Makanan</button>
+                    <button onclick="filterProducts('aksesoris')"
+                        class="filter-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-choco-700 hover:bg-peach-100 transition-all">Aksesoris</button>
+                    <button onclick="filterProducts('penitipan')"
+                        class="filter-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-choco-700 hover:bg-peach-100 transition-all">Penitipan</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="productGrid">
+                <!-- Product Card 1 -->
+                <div
+                    class="product-item kandang bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-peach-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-amberwarm-50">
+                            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=400"
+                                alt="Kandang Akrilik Premium"
+                                onerror="this.src='https://placehold.co/400x300/ffedd5/7c2d12?text=Kandang+Akrilik'"
+                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            <span
+                                class="absolute top-3 left-3 bg-peach-400 text-white text-xs font-bold px-3 py-1 rounded-full">Kandang</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-extrabold text-lg text-choco-700 mb-1">Kandang Akrilik XL (80x45cm)</h3>
+                            <p class="text-xs text-choco-700/70 mb-3">Pandangan 360°, ventilasi atas, kokoh & tebal 3mm.
+                            </p>
+                            <div class="text-peach-500 font-extrabold text-xl">Rp 480.000</div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button
+                            onclick="openModal('Kandang Akrilik XL (80x45cm)', 'Rp 480.000', 'Enclosure akrilik bening transparan dengan dimensi luas sesuai standar internasional. Cocok untuk Hamster Syrian maupun Dwarf. Memiliki lubang ventilasi samping dan atas yang sangat aman.', 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=400')"
+                            class="w-full bg-peach-100 hover:bg-peach-400 text-peach-500 hover:text-white font-bold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="eye" class="w-4 h-4"></i> Detail Produk
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div
+                    class="product-item makanan bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-peach-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-amberwarm-50">
+                            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=400"
+                                alt="Super Seed Mix Gourmet"
+                                onerror="this.src='https://placehold.co/400x300/fde68a/7c2d12?text=Racikan+Pakan'"
+                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            <span
+                                class="absolute top-3 left-3 bg-amberwarm-500 text-white text-xs font-bold px-3 py-1 rounded-full">Makanan</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-extrabold text-lg text-choco-700 mb-1">Super Seed Mix Gourmet 500g</h3>
+                            <p class="text-xs text-choco-700/70 mb-3">35+ Jenis bijian, murni alami tanpa pewarna
+                                sintetis.</p>
+                            <div class="text-peach-500 font-extrabold text-xl">Rp 65.000</div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button
+                            onclick="openModal('Super Seed Mix Gourmet 500g', 'Rp 65.000', 'Racikan pakan lengkap dirancang khusus dengan variasi 35 jenis biji-bijian, kacang-kacangan, mealworm kering, dan herbal kering. Menjaga nafsu makan dan keindahan bulu.', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=400')"
+                            class="w-full bg-peach-100 hover:bg-peach-400 text-peach-500 hover:text-white font-bold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="eye" class="w-4 h-4"></i> Detail Produk
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div
+                    class="product-item aksesoris bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-peach-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-amberwarm-50">
+                            <img src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&q=80&w=400"
+                                alt="Silent Running Wheel 26cm"
+                                onerror="this.src='https://placehold.co/400x300/fed7aa/7c2d12?text=Silent+Wheel'"
+                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            <span
+                                class="absolute top-3 left-3 bg-peach-400 text-white text-xs font-bold px-3 py-1 rounded-full">Aksesoris</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-extrabold text-lg text-choco-700 mb-1">Silent Dual-Bearing Wheel 26cm</h3>
+                            <p class="text-xs text-choco-700/70 mb-3">Tanpa suara, permukaan rata aman untuk tulang
+                                punggung.</p>
+                            <div class="text-peach-500 font-extrabold text-xl">Rp 135.000</div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button
+                            onclick="openModal('Silent Dual-Bearing Wheel 26cm', 'Rp 135.000', 'Roda lari berdiameter 26cm dengan teknologi dual bearing ultra-silent. Tidak berbunyi saat hamster berlari di malam hari dan mencegah cidera tulang punggung (back curvature).', 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&q=80&w=400')"
+                            class="w-full bg-peach-100 hover:bg-peach-400 text-peach-500 hover:text-white font-bold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="eye" class="w-4 h-4"></i> Detail Produk
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div
+                    class="product-item penitipan bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-peach-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-amberwarm-50">
+                            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&q=80&w=400"
+                                alt="Hotel Hamster VIP Boarding"
+                                onerror="this.src='https://placehold.co/400x300/ffedd5/7c2d12?text=Hotel+Penitipan'"
+                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            <span
+                                class="absolute top-3 left-3 bg-amberwarm-600 text-white text-xs font-bold px-3 py-1 rounded-full">Penitipan</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-extrabold text-lg text-choco-700 mb-1">Hotel Boarding VIP (Per Hari)</h3>
+                            <p class="text-xs text-choco-700/70 mb-3">Ruang AC 24 jam, update foto/video harian via WA.
+                            </p>
+                            <div class="text-peach-500 font-extrabold text-xl">Rp 25.000 <span
+                                    class="text-xs text-choco-700/60 font-normal">/hari</span></div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button
+                            onclick="openModal('Hotel Boarding VIP (Per Hari)', 'Rp 25.000/hari', 'Layanan penitipan hamster saat liburan. Fasilitas mencakup ruang ber-AC (suhu terjaga 22-25°C), pakan premium harian, pembersihan spot bedding, dan laporan foto/video singkat setiap hari.', 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&q=80&w=400')"
+                            class="w-full bg-peach-100 hover:bg-peach-400 text-peach-500 hover:text-white font-bold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="eye" class="w-4 h-4"></i> Detail Layanan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cage Size Calculator Widget -->
+    <section id="kalkulator" class="py-16 bg-gradient-to-br from-amberwarm-100 via-peach-100 to-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-amberwarm-200">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span
+                        class="bg-peach-100 text-peach-500 text-xs font-bold px-4 py-1.5 rounded-full inline-block mb-3">Fitur
+                        Interaktif</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-choco-700">Kalkulator Kelayakan Kandang</h2>
+                    <p class="text-xs sm:text-sm text-choco-700/70 mt-1">Masukkan dimensi kandang Anda untuk memeriksa
+                        apakah sudah memenuhi standar minimal kesejahteraan hamster.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-bold text-choco-700 mb-2">Panjang (cm)</label>
+                        <input type="number" id="calcLength" placeholder="Contoh: 80" value="80"
+                            class="w-full px-4 py-3 rounded-xl border border-peach-200 focus:outline-none focus:ring-2 focus:ring-peach-400 font-bold text-choco-700">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-choco-700 mb-2">Lebar (cm)</label>
+                        <input type="number" id="calcWidth" placeholder="Contoh: 40" value="45"
+                            class="w-full px-4 py-3 rounded-xl border border-peach-200 focus:outline-none focus:ring-2 focus:ring-peach-400 font-bold text-choco-700">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-choco-700 mb-2">Jenis Hamster</label>
+                        <select id="calcType"
+                            class="w-full px-4 py-3 rounded-xl border border-peach-200 focus:outline-none focus:ring-2 focus:ring-peach-400 font-bold text-choco-700 bg-white">
+                            <option value="dwarf">Hamster Dwarf (Winter White/Roborovski)</option>
+                            <option value="syrian">Hamster Syrian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button onclick="calculateCageSize()"
+                    class="w-full bg-peach-400 hover:bg-peach-500 text-white font-extrabold py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i> Hitung Luas & Evaluasi Kandang
+                </button>
+
+                <!-- Calculation Result Display -->
+                <div id="calcResult"
+                    class="mt-6 p-5 rounded-2xl bg-cream border border-peach-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div id="resultIcon"
+                            class="w-12 h-12 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-choco-700/70 font-semibold">Total Luas Lantai: <span id="areaText"
+                                    class="font-extrabold text-choco-700">3600 cm²</span></div>
+                            <div id="statusText" class="font-extrabold text-green-600 text-base sm:text-lg">Kandang
+                                Sangat Layak & Ideal! ✨</div>
+                        </div>
+                    </div>
+                    <div id="recommendationBadge"
+                        class="text-xs font-medium text-choco-700/80 bg-white px-4 py-2 rounded-xl shadow-sm border border-peach-100 text-center sm:text-left">
+                        Memenuhi syarat minimal (min. 3000 cm²)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Corner / Care Tips Section -->
+    <section id="edukasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-peach-500 uppercase tracking-widest mb-2">Panduan Perawatan</h2>
+                <p class="text-3xl font-extrabold text-choco-700">Sudut Edukasi Hamster</p>
+                <p class="text-sm text-choco-700/70 mt-2">Ketahui mitos dan fakta penting agar hamster kesayangan tetap
+                    sehat dan berumur panjang.</p>
+            </div>
+
+            <!-- Interactive Accordion List -->
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- Accordion Item 1 -->
+                <div class="border border-peach-100 rounded-2xl overflow-hidden bg-cream transition-all">
+                    <button onclick="toggleAccordion(1)"
+                        class="w-full p-5 text-left font-bold text-choco-700 flex justify-between items-center hover:bg-peach-50">
+                        <span class="flex items-center gap-3 text-base sm:text-lg">
+                            <i data-lucide="alert-triangle" class="w-5 h-5 text-amberwarm-500"></i>
+                            Apakah Hamster Boleh Dimandikan Air?
+                        </span>
+                        <i id="accIcon-1" data-lucide="chevron-down"
+                            class="w-5 h-5 text-peach-400 transition-transform"></i>
+                    </button>
+                    <div id="accContent-1"
+                        class="hidden p-5 pt-0 text-sm text-choco-700/80 leading-relaxed border-t border-peach-100/50">
+                        <strong class="text-red-500">TIDAK BOLEH!</strong> Hamster sangat rentan hipotermia dan
+                        pneumonia jika terkena air. Bulu alami hamster mengandung minyak yang akan hilang jika kena air.
+                        Gunakan <strong>Pasir Mandi Khusus (Bathing Sand)</strong> agar hamster membersihkan diri secara
+                        alami dengan berguling.
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="border border-peach-100 rounded-2xl overflow-hidden bg-cream transition-all">
+                    <button onclick="toggleAccordion(2)"
+                        class="w-full p-5 text-left font-bold text-choco-700 flex justify-between items-center hover:bg-peach-50">
+                        <span class="flex items-center gap-3 text-base sm:text-lg">
+                            <i data-lucide="home" class="w-5 h-5 text-peach-400"></i>
+                            Berapa Ketebalan Bedding (Alas Kandang) Yang Baik?
+                        </span>
+                        <i id="accIcon-2" data-lucide="chevron-down"
+                            class="w-5 h-5 text-peach-400 transition-transform"></i>
+                    </button>
+                    <div id="accContent-2"
+                        class="hidden p-5 pt-0 text-sm text-choco-700/80 leading-relaxed border-t border-peach-100/50">
+                        Di alam liar, hamster adalah hewan penggali terowongan (burrowing). Ketebalan bedding
+                        kertas/serbuk kayu bebas debu idealnya adalah <strong>minimal 10 - 15 cm</strong>. Ini
+                        mengurangi stress dan menjaga suhu tubuh hamster tetap hangat.
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3 -->
+                <div class="border border-peach-100 rounded-2xl overflow-hidden bg-cream transition-all">
+                    <button onclick="toggleAccordion(3)"
+                        class="w-full p-5 text-left font-bold text-choco-700 flex justify-between items-center hover:bg-peach-50">
+                        <span class="flex items-center gap-3 text-base sm:text-lg">
+                            <i data-lucide="users" class="w-5 h-5 text-amberwarm-600"></i>
+                            Bolehkah Memelihara Lebih Dari 1 Hamster Dalam 1 Kandang?
+                        </span>
+                        <i id="accIcon-3" data-lucide="chevron-down"
+                            class="w-5 h-5 text-peach-400 transition-transform"></i>
+                    </button>
+                    <div id="accContent-3"
+                        class="hidden p-5 pt-0 text-sm text-choco-700/80 leading-relaxed border-t border-peach-100/50">
+                        Mayoritas spesies hamster (terutama <strong>Hamster Syrian</strong>) bersifat soliter dan
+                        teritorial secara ekstrem. Menggabungkan hamster dalam satu kandang dapat memicu pertengkaran
+                        hebat yang berujung fatal. Terapkan prinsip: <strong>1 Hamster = 1 Kandang</strong>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section id="testimoni" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-peach-500 uppercase tracking-widest mb-2">Kata Mereka</h2>
+                <p class="text-3xl font-extrabold text-choco-700">Ulasan Pemilik Hamster Bahagia</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-peach-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-choco-700/80 text-sm leading-relaxed mb-6">
+                            "Kandang akriliknya bagus banget & rapi! Syrian saya jadi aktif menggali dan gak pernah
+                            ketahuan gigit jeruji lagi karena sudah gak stress. Seller juga edukatif!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-peach-200 flex items-center justify-center font-bold text-choco-700">
+                            S</div>
+                        <div>
+                            <h4 class="font-bold text-choco-700 text-sm">Siti Rahma</h4>
+                            <p class="text-xs text-choco-700/60">Pemilik Hamster Syrian "Mochi"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-peach-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-choco-700/80 text-sm leading-relaxed mb-6">
+                            "Nitip hamster 1 minggu pas mudik Lebaran aman banget. Dikirim foto & video tiap hari di WA.
+                            Kamarnya ber-AC jadi gak takut kepanasan."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-amberwarm-200 flex items-center justify-center font-bold text-choco-700">
+                            B</div>
+                        <div>
+                            <h4 class="font-bold text-choco-700 text-sm">Budi Santoso</h4>
+                            <p class="text-xs text-choco-700/60">Pelanggan Boarding VIP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-peach-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-choco-700/80 text-sm leading-relaxed mb-6">
+                            "Silent wheel-nya beneran hening! Dulu pakai wheel bawaan kandang berisik banget kalau
+                            malam, sekarang tidur jadi nyenyak."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-peach-200 flex items-center justify-center font-bold text-choco-700">
+                            A</div>
+                        <div>
+                            <h4 class="font-bold text-choco-700 text-sm">Amanda Putri</h4>
+                            <p class="text-xs text-choco-700/60">Pemilik Winter White "Oreo"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact Section -->
+    <footer class="bg-choco-700 text-white pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-choco-500">
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-peach-400 rounded-xl flex items-center justify-center text-white font-bold">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight">Rumah<span
+                                class="text-peach-300">Hamster</span></span>
+                    </div>
+                    <p class="text-sm text-amberwarm-100/70 leading-relaxed">
+                        Pusat kebutuhan hamster berstandar kesejahteraan hewan. Kami menyediakan produk berkualitas
+                        terbaik demi kehidupan hamster yang sehat & bahagia.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-peach-300 font-bold mb-4">Navigasi</h4>
+                    <ul class="space-y-2.5 text-sm text-amberwarm-100/80">
+                        <li><a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="#produk" class="hover:text-white transition-colors">Katalog Produk</a></li>
+                        <li><a href="#kalkulator" class="hover:text-white transition-colors">Kalkulator Kandang</a></li>
+                        <li><a href="#edukasi" class="hover:text-white transition-colors">Tips Perawatan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="text-peach-300 font-bold mb-4">Kontak & Jam Buka</h4>
+                    <ul class="space-y-3 text-sm text-amberwarm-100/80">
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="phone" class="w-4 h-4 text-peach-300"></i>
+                            <span>+62 812-3456-7890</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-peach-300"></i>
+                            <span>Jl. Hamster Sejahtera No. 12, Surakarta</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="clock" class="w-4 h-4 text-peach-300"></i>
+                            <span>Senin - Minggu: 09:00 - 20:00 WIB</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Social Media & Action -->
+                <div>
+                    <h4 class="text-peach-300 font-bold mb-4">Ikuti Kami</h4>
+                    <div class="flex gap-3 mb-6">
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-choco-500 hover:bg-peach-400 flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-choco-500 hover:bg-peach-400 flex items-center justify-center transition-colors">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-choco-500 hover:bg-peach-400 flex items-center justify-center transition-colors">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+                        class="w-full bg-peach-400 hover:bg-peach-500 text-white font-bold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 text-sm shadow-md">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> Chat WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-amberwarm-100/50">
+                © 2026 Rumah Hamster Indonesia. All rights reserved. Built with love for small pets.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Product Detail Modal -->
+    <div id="productModal"
+        class="fixed inset-0 z-50 hidden bg-choco-800/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div
+            class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl transform transition-all border border-peach-100">
+            <div class="relative h-56 bg-amberwarm-50">
+                <img id="modalImage" src="" alt="Product Detail" class="w-full h-full object-cover">
+                <button onclick="closeModal()"
+                    class="absolute top-4 right-4 bg-white/80 hover:bg-white text-choco-700 p-2 rounded-full shadow-md transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <h3 id="modalTitle" class="text-xl font-extrabold text-choco-700 mb-1"></h3>
+                <div id="modalPrice" class="text-peach-500 font-extrabold text-xl mb-4"></div>
+                <p id="modalDescription" class="text-choco-700/80 text-sm leading-relaxed mb-6"></p>
+                <div class="flex gap-3">
+                    <a id="modalWaBtn" href="#" target="_blank" rel="noopener"
+                        class="flex-1 bg-peach-400 hover:bg-peach-500 text-white font-bold py-3 rounded-xl transition-colors text-center text-sm flex items-center justify-center gap-2 shadow-lg shadow-peach-400/30">
+                        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pesan via WA
+                    </a>
+                    <button onclick="closeModal()"
+                        class="px-5 py-3 rounded-xl bg-cream hover:bg-peach-100 text-choco-700 font-bold text-sm transition-colors">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Application Script -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>
